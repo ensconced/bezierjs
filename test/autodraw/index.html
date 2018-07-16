@@ -34,9 +34,9 @@
     var ctx = cvs.getContext("2d");
     var handler = new Handler(cvs);
     ctx.strokeStyle = "black";
-    cvs.listen("mousedown", handler.md.bind(handler));
-    cvs.listen("mousemove", handler.mm.bind(handler));
-    cvs.listen("mouseup", handler.me.bind(handler));
+    cvs.listen("mousedown", evt => handler.mousedown(evt));
+    cvs.listen("mousemove", evt => handler.mousemove(evt));
+    cvs.listen("mouseup", evt => handler.mouseup(evt));
   });</script>
 </body>
 </html>
